@@ -82,18 +82,18 @@ def generate_password(length):
 def main():
     cprint("""
                         ____________
-                      .~      ,   . ~.
-                     /                \
-                    /      /~\/~\   ,  \
-                   |   .   \    /   '   |
+                      .~            ~.
+                     /                \\
+                    /      /~\/~\      \\
+                   |   .   \    /   .   |
                    |         \/         |
           XX       |  /~~\        /~~\  |       XX
         XX  X      | |  o  \    /  o  | |      X  XX
       XX     X     |  \____/    \____/  |     X     XX
- XXXXX     XX      \         /\        ,/      XX     XXXXX
-X        XX%;;@      \      /  \     ,/      @%%;XX        X
-X       X  @%%;;@     |           '  |     @%%;;@  X       X
-X      X     @%%;;@   |. ` ; ; ; ;  ,|   @%%;;@     X      X
+ XXXXX     XX      \         /\        /      XX     XXXXX
+X        XX%;;@      \      /  \      /      @%%;XX        X
+X       X  @%%;;@     |  '        '  |     @%%;;@  X       X
+X      X     @%%;;@   |. ; ; ; ; ;  .|   @%%;;@     X      X
  X    X        @%%;;@                  @%%;;@        X    X
   X   X          @%%;;@              @%%;;@          X   X
    X  X            @%%;;@          @%%;;@            X  X
