@@ -60,5 +60,31 @@ def find_by_platform(cls,platform):
     for credential in cls.credential_list:
       if credential.platform == platform:
         return True
-                  
+
     return False
+
+  @classmethod
+  def display_credentials(cls):
+    '''
+    method that returns the credential list
+    '''
+    return cls.credential_list
+
+  @classmethod
+  def copy_password(cls,platform):
+    """
+    method that copies the credential password on the system clipboard
+    """
+    credential_found = Credential.find_by_platform(platform)
+    pyperclip.copy(credential_found.password)
+
+  @classmethod
+  def generate_password(cls,length):
+    """
+    this method uses the string method to generate a password of random digits and letters
+    the length of the password is determined by the length passed in the function's parameter 
+    Args:
+    the desired password length
+    """
+    chars = string.ascii_uppercase + string.digits + string.ascii_lowercase
+    return "".join(random.choice(chars) for i in range(length))
