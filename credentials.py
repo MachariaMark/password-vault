@@ -33,3 +33,32 @@ def delete_credential(self):
   this method deletes a saved credential from the credential_list
   '''
   Credential.credential_list.remove(self)
+
+@classmethod
+def find_by_platform(cls,platform):
+  '''
+  Method that takes in a platform and returns a credential that matches that name.
+  Args:
+    platform: Name to search for
+  Returns :
+    Credential that matches the platform.
+  '''
+
+  for credential in cls.credential_list:
+    if credential.platform == platform:
+      return credential
+    
+  @classmethod
+  def credential_exists(cls,platform):
+    '''
+    Method that checks if a credential exists from the credential list.
+    Args:
+      platform: Name to search if it exists in credential list
+    Returns :
+      Boolean: True or false depending if the credentials exists
+    '''
+    for credential in cls.credential_list:
+      if credential.platform == platform:
+        return True
+                  
+    return False
