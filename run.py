@@ -43,9 +43,38 @@ def delete_credential(credential):
   """
   credential.delete_credential()
 
-
 def find_credentials(platform):
   """
   Function that finds a credential by platform name and returns the credentials
   """
   return Credential.find_by_platform(platform)
+
+def check_existing_credential(platform):
+  """
+  Function that check if a credential exists with that number and return a Boolean
+  """
+  return Credential.credential_exists(platform)
+
+
+def display_credentials():
+  """
+  Function that returns all the saved credentials
+  """
+  return Credential.display_credentials()
+
+
+def copy_password(platform):
+  """
+  Function which copies the password of the platform
+  taken as an argument
+  """
+  return Credential.copy_password(platform)
+
+
+def generate_password(length):
+  """
+  Function which generates a random password
+  Args:
+    the desired password length
+  """
+  return Credential.generate_password(length)
